@@ -1,13 +1,15 @@
 import React from 'react';
 import Pokecard from './Pokecard';
-// import './Pokedex.css';
+import pokemon from './pokemon';
+import './Pokedex.css';
 
-const Pokedex = ({ pokemon }) => {
+console.log("POKEMON: ", pokemon);
+const Pokedex = ({ data=pokemon }) => {
   return (
     <div className="Pokedex">
       <h1 className="Pokedex-title">Pokedex</h1>
       <div className="Pokedex-cards">
-        {pokemon.map(p => (
+        {data.map(p => (
           <Pokecard 
             id={p.id} 
             name={p.name} 
